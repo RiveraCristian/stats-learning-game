@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
-            Hecho con <Heart className="w-4 h-4 text-red-500 fill-current" /> por{' '}
+            Hecho por{' '}
             <a
               href="https://github.com/RiveraCristian"
               target="_blank"
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
             </a>
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
-            © 2024 Stats Learning Game. MIT License.
+            © 2025 Stats Learning Game. MIT License.
           </p>
         </div>
       </div>
