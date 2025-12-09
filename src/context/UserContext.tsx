@@ -3,6 +3,7 @@ import { UserProfile, GameData, GameScore, Category, CategoryProgress } from '..
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { processGameCompletion, calculateLevel, shouldUpdateStreak } from '../utils/scoring';
 import { checkNewAchievements } from '../data/achievements';
+import { games } from '../data/games';
 
 interface UserContextType {
   profile: UserProfile;
@@ -95,8 +96,9 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
             ...categoryProgress,
             totalXP: categoryProgress.totalXP + result.xpEarned,
             gamesCompleted: completedGames.filter(id => {
-              // Count games in this category
-              return id.includes(categoryKey);
+              // Count games in this category by looking up the game
+              const gameData = games.find(g => g.id === id);
+              return gameData?.category === categoryKey;
             }).length,
             bestScores: newBestScores,
           },
