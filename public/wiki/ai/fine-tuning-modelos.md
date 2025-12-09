@@ -275,10 +275,10 @@ Optimizar "soft prompts" (embeddings continuos).
 **Instruction Tuning:**
 Entrenar en pares (instruction, output).
 
-**RLHF:**
-1. Fine-tune con supervised learning
-2. Entrenar modelo de recompensa
-3. Optimizar con PPO
+**RLHF (Reinforcement Learning from Human Feedback):**
+1. Fine-tune inicial con supervised learning en ejemplos de alta calidad
+2. Entrenar modelo de recompensa usando preferencias humanas
+3. Optimizar con PPO (Proximal Policy Optimization) para maximizar recompensas del modelo
 
 **Few-Shot In-Context Learning:**
 Alternativa a fine-tuning para LLMs grandes.

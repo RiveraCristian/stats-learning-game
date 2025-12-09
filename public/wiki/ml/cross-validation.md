@@ -95,7 +95,7 @@ K = n (número total de observaciones)
 
 **Ventajas:**
 ✅ Estimación casi insesgada
-✅ Determinístico (no aleatório)
+✅ Determinístico (no aleatorio)
 ✅ Útil para datasets muy pequeños
 
 **Desventajas:**
