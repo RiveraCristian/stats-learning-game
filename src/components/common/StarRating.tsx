@@ -34,7 +34,7 @@ export const StarRating: React.FC<StarRatingProps> = ({ stars, size = 'md', anim
           : {};
 
         return (
-          <StarComponent key={i} {...starProps}>
+          <StarComponent key={i} {...(starProps as any)}>
             <Star
               className={`${sizeClasses[size]} ${
                 isEarned

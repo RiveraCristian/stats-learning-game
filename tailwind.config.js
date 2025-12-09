@@ -25,16 +25,6 @@ export default {
           light: '#FBBF24',
         },
       },
-      animation: {
-        'bounce-in': 'bounceIn 0.5s ease-out',
-      },
-      keyframes: {
-        bounceIn: {
-          '0%': { transform: 'scale(0)', opacity: '0' },
-          '50%': { transform: 'scale(1.1)', opacity: '1' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-      },
     },
   },
   plugins: [],
