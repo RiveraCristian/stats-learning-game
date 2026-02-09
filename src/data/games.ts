@@ -116,6 +116,84 @@ export const games: GameData[] = [
     xpReward: { 1: 100, 2: 150, 3: 200 },
     relatedArticles: ['procesamiento-lenguaje-natural'],
   },
+  {
+    id: 'monty-hall',
+    name: 'Problema de Monty Hall',
+    description: 'Experimenta con el famoso problema de probabilidad de las tres puertas',
+    category: 'probability' as Category,
+    level: 'intermediate',
+    xpReward: { 1: 75, 2: 100, 3: 150 },
+    relatedArticles: ['probabilidad-condicional', 'que-es-probabilidad'],
+  },
+  {
+    id: 'probability-tree',
+    name: 'Constructor de Árboles de Probabilidad',
+    description: 'Construye árboles de probabilidad y calcula probabilidades compuestas',
+    category: 'probability' as Category,
+    level: 'advanced',
+    xpReward: { 1: 100, 2: 150, 3: 200 },
+    relatedArticles: ['probabilidad-condicional', 'teorema-bayes'],
+  },
+
+  // NEW STATISTICS GAMES
+  {
+    id: 'hypothesis-test',
+    name: 'Simulador de Pruebas de Hipótesis',
+    description: 'Configura y ejecuta pruebas de hipótesis estadísticas',
+    category: 'statistics' as Category,
+    level: 'advanced',
+    xpReward: { 1: 100, 2: 150, 3: 200 },
+    relatedArticles: ['pruebas-hipotesis', 'intervalos-confianza'],
+  },
+  {
+    id: 'chi-square',
+    name: 'Test Chi-Cuadrado',
+    description: 'Analiza tablas de contingencia y prueba independencia de variables',
+    category: 'statistics' as Category,
+    level: 'intermediate',
+    xpReward: { 1: 75, 2: 100, 3: 150 },
+    relatedArticles: ['pruebas-hipotesis', 'correlacion-causalidad'],
+  },
+
+  // NEW ML GAMES
+  {
+    id: 'neural-network',
+    name: 'Neural Network Playground',
+    description: 'Diseña y entrena redes neuronales en datasets interactivos',
+    category: 'ml' as Category,
+    level: 'advanced',
+    xpReward: { 1: 100, 2: 150, 3: 200 },
+    relatedArticles: ['redes-neuronales', 'overfitting-underfitting'],
+  },
+  {
+    id: 'gradient-descent-viz',
+    name: 'Visualizador de Gradient Descent',
+    description: 'Observa cómo gradient descent optimiza funciones en tiempo real',
+    category: 'ml' as Category,
+    level: 'intermediate',
+    xpReward: { 1: 75, 2: 100, 3: 150 },
+    relatedArticles: ['gradient-descent', 'regresion-lineal-ml'],
+  },
+
+  // NEW AI GAMES
+  {
+    id: 'ai-ethics',
+    name: 'Escenarios de Ética en IA',
+    description: 'Toma decisiones éticas en dilemas reales de inteligencia artificial',
+    category: 'ai' as Category,
+    level: 'intermediate',
+    xpReward: { 1: 75, 2: 100, 3: 150 },
+    relatedArticles: ['etica-ia', 'ia-debil-vs-fuerte'],
+  },
+  {
+    id: 'transformer-attention',
+    name: 'Visualizador de Attention en Transformers',
+    description: 'Explora cómo funcionan los mecanismos de attention en transformers',
+    category: 'ai' as Category,
+    level: 'advanced',
+    xpReward: { 1: 100, 2: 150, 3: 200 },
+    relatedArticles: ['que-son-llms', 'procesamiento-lenguaje-natural'],
+  },
 ];
 
 export const getGamesByCategory = (category: Category) => {

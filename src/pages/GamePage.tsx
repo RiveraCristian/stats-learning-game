@@ -22,6 +22,7 @@ import { OverfittingGame } from '../components/games/ml/OverfittingGame';
 import { AIMLDLGame } from '../components/games/ai/AIMLDLGame';
 import { PromptEngineeringGame } from '../components/games/ai/PromptEngineeringGame';
 import { NLPChallengeGame } from '../components/games/ai/NLPChallengeGame';
+import { MontyHallGame } from '../components/games/probability/MontyHallGame';
 
 export const GamePage: React.FC = () => {
   const { gameId } = useParams<{ gameId: string }>();
@@ -87,6 +88,29 @@ export const GamePage: React.FC = () => {
         return <PromptEngineeringGame {...gameProps} />;
       case 'nlp-challenge':
         return <NLPChallengeGame {...gameProps} />;
+      case 'monty-hall':
+        return <MontyHallGame {...gameProps} />;
+      case 'probability-tree':
+      case 'hypothesis-test':
+      case 'chi-square':
+      case 'neural-network':
+      case 'gradient-descent-viz':
+      case 'ai-ethics':
+      case 'transformer-attention':
+        return (
+          <div className="text-center py-20">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Próximamente</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              Este juego estará disponible pronto. ¡Estamos trabajando en traerte esta experiencia de aprendizaje!
+            </p>
+            <button
+              onClick={() => handleGameComplete(75)}
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Obtener XP de Vista Previa
+            </button>
+          </div>
+        );
       default:
         return (
           <div className="text-center py-20">
@@ -163,11 +187,11 @@ export const GamePage: React.FC = () => {
           >
             <Trophy className="w-20 h-20 mx-auto mb-4 text-yellow-500" />
           </motion.div>
-          
+
           <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
             ¡Juego Completado!
           </h2>
-          
+
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
             Obtuviste {gameScore} puntos
           </p>
